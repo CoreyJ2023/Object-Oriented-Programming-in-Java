@@ -20,7 +20,7 @@ public class FuelV2 {
         double plusPrice = 4.99;
         double supremePrice = 5.99;
 
-        int gallons;
+        double gallons;
         double total;
 
         int fuelSelect;
@@ -30,6 +30,7 @@ public class FuelV2 {
         System.out.println("2 - Plus");
         System.out.println("3 - Supreme");
         fuelSelect = fuel.nextInt();
+        
         while (fuelSelect <= 0 || fuelSelect > 3) {
             System.out.println("Error! Please select fuel type below. These are your options:");
             System.out.println("1 - Regular");
@@ -39,7 +40,7 @@ public class FuelV2 {
         }
 
         switch (fuelSelect) {
-            case 1:
+            case 1 -> {
                 System.out.println("You have selected: " + regular + ".");
                 System.out.println("Please enter gallons");
                 gallons = fuel.nextDouble();
@@ -51,9 +52,9 @@ public class FuelV2 {
 
                 total = gallons * regularPrice;
                 System.out.println("Thank you! Here's your reciept: " + total);
-                break;
+            }
 
-            case 2:
+            case 2 -> {
                 System.out.println("You have selected: " + plus + ".");
                 System.out.println("Please enter gallons");
                 gallons = fuel.nextDouble();
@@ -65,9 +66,9 @@ public class FuelV2 {
 
                 total = gallons * plusPrice;
                 System.out.println("Thank you! Here's your reciept: " + total);
-                break;
+            }
 
-            case 3:
+            case 3 -> {
                 System.out.println("You have selected: " + supreme + ".");
                 System.out.println("Please enter gallons");
                 gallons = fuel.nextDouble();
@@ -79,7 +80,7 @@ public class FuelV2 {
 
                 total = gallons * supremePrice;
                 System.out.println("Thank you! Here's your reciept: " + total);
-                break;
+            }
         }
     }
 }
