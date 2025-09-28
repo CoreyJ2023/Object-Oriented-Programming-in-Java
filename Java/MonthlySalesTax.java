@@ -1,6 +1,6 @@
 /**
  * Programmer:      Corey Jenkins
- * Date:            September 22, 2025
+ * Date:            September 22, 2025 (Updated September 28, 2025)
  * Filename:        MonthlySalesTaxes.java
  * Purpose:         To calculate the sales with taxes from both state and country. Uses OOP and a Constructor.
  */
@@ -35,8 +35,8 @@ public class MonthlySalesTax
         double salesWithCounty = sales * myTax.countyTax;
         double totalSales = salesWithState + salesWithCounty;
 
-        System.out.println(salesWithState);
-        System.out.println(salesWithCounty);
-        System.out.println(totalSales);
+        System.out.println("The amount of sales for the month with state taxes: " + salesWithState + ".");
+        System.out.println("The amount of sales for the month with county taxes: " + salesWithCounty + ".");
+        System.out.println("Total amount: " + totalSales + ".");
     }
 }
